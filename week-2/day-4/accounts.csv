@@ -1,0 +1,5 @@
+name,balance,account_number,routing_number,type
+Gavin,1000,555555,11111,checking
+Jason,9999,545454,22222,savings
+Toni,1000000,121212,33333,savings
+Mark,2000000,323232,44444,checking
