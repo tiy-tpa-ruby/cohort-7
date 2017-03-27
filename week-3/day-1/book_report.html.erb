@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book Report</title>
+    <style media="screen">
+      ul {
+        list-style: none;
+        display: flex;
+        border-bottom: 5px solid black;
+      }
+
+      li {
+        border: 1px solid gray;
+        margin: 10px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <% @books.each do |book| %>
+      <ul>
+        <li><%= book.title %> by <%= book.author %></li>
+        <li>Published: <%= book.year %></li>
+        <li>Page Count: <%= book.page_count %></li>
+      </ul>
+    <% end %>
+  </body>
+</html>
