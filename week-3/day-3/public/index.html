@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="screen.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container tiy-container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Brand</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Add an Employee</a></li>
+                  <li><a href="#">Delete an Employee</a></li>
+                  <li><a href="#">Employee Report</a></li>
+                </ul>
+              </li>
+            </ul>
+            <p class="navbar-text">Signed in as Mark Otto</p>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+      <div class="jumbotron">
+        <h1>Welcome to the amazing TIY Database</h1>
+        <p>Your friendly HR app.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        <p><a class="btn btn-danger" href="http://theironyard.com">Visit our company</a></p>
+      </div>
+      <div class="row">
+        <div class="col-md-1 col-xs-1">...</div>
+        <div class="col-md-7 col-xs-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        <div class="col-md-3 col-xs-2">SIDEBAR!</div>
+        <div class="col-md-1 col-xs-1">...</div>
+      </div>
+      <div class="alert alert-danger" role="alert">
+        This form could not save
+
+        <span class="badge pull-right">9 errors</span>
+      </div>
+      <div class="page-header">
+        <h1>List of Employees <small>All the Yardigans</small></h1>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading">Tasks for Today</div>
+        <div class="panel-body">
+          <p>Here are all of the pending tasks for you to do today</p>
+        </div>
+
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge">14</span>
+            Process Instructor Applications
+          </li>
+          <li class="list-group-item">
+            <span class="badge">128</span>
+            Process Students Applications
+          </li>
+        </ul>
+      </div>
+      <table class="table table-striped table-bordered table-hover table-responsive">
+        <thead>
+          <th>Name</th>
+          <th>Salary</th>
+          <th>Position</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gavin</td>
+            <td>$1,000,000</td>
+            <td>Instructor</td>
+          </tr>
+          <tr>
+            <td>Jason</td>
+            <td>$2,000,000</td>
+            <td>Instructor</td>
+          </tr>
+          <tr>
+            <td>Gavin</td>
+            <td>$1,000,000</td>
+            <td>Instructor</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
