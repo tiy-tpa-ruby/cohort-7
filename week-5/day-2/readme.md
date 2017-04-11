@@ -173,9 +173,9 @@
         </div>
       </div>
       <div class="form-group">
-        <%= label_tag :password, class: "col-sm-2 control-label" %>
+        <%= label_tag :password, nil, class: "col-sm-2 control-label" %>
         <div class="col-sm-10">
-          <%= password_field_tag :password, class: "form-control" %>
+          <%= password_field_tag :password, nil, class: "form-control" %>
         </div>
       </div>
       <%= submit_tag "Submit", class: "btn btn-primary" %>
