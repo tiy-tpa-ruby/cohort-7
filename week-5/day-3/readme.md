@@ -98,7 +98,7 @@ Add the line
 
 ### Updating the form to allow an upload field
 
-Still assuming we are working with the `Item` model, lets visit `app/views/items/form.html.erb` (or `form.html.haml`)
+Still assuming we are working with the `Item` model, lets visit `app/views/items/_form.html.erb` (or `_form.html.haml`)
 
 Add fields for the `image_data`
 
@@ -135,6 +135,12 @@ HAML:
 ```
 
 ## Processing uploads
+
+- If you are going to use image processing, first:
+
+```sh
+brew install imagemagick
+```
 
 See [shrine's documentation](https://github.com/janko-m/shrine#processing) for details on processing (e.g. resizing) uploads
 
