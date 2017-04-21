@@ -4,6 +4,7 @@ require_relative 'swapi_attribute'
 require_relative 'film'
 require_relative 'character'
 require 'terminal-table'
+require 'tty-prompt'
 
 # When you run the program from the command line (say, ruby alderaan.rb),
 # you are presented with a list of Star Wars movie titles to choose between.
@@ -19,23 +20,20 @@ class Menu
   end
 
   def show_choices(array_of_things, zero_message, choice_message)
-    choices = []
+    prompt = TTY::Prompt.new
 
-    choices << [0, "Exit"]
-    array_of_things.each_with_index do |thing, index|
-      choices << [index + 1, yield(thing)]
+    prompt.select(choice_message) do |menu|
+      menu.per_page array_of_things.size + 1
+      menu.choice zero_message, 0
+      array_of_things.each_with_index do |thing, index|
+        menu.choice yield(thing), index + 1
+      end
     end
-
-    puts Terminal::Table.new(rows: choices)
-
-    print choice_message
-
-    gets.chomp.to_i
   end
 
   def main_menu
     loop do
-      choice = show_choices(@films, "0 - Exit", "What film do you want information on? ") do |film|
+      choice = show_choices(@films, "Exit", "What film do you want information on? ") do |film|
         film.title
       end
 
