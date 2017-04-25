@@ -18,10 +18,25 @@ module Api
     def create
       @api_note = Note.new(api_note_params)
 
+      # Get the tags as a string
+      tags = params[:tags]
+
+      # Split them up by commas
+      tag_names = tags.split(',').map { |name| name.strip }
+
+      # Turn those array of tag string names into tag objects
+      tag_objects = tag_names.map { |tag_name| Tag.find_or_create_by(name: tag_name) }
+
+      # Assign the new tag objects to this note
+      @api_note.tags = tag_objects
+
+      # One liner.
+      #  @api_note.tags = params[:tags].split(',').map { |tag_name| Tag.find_or_create_by(name: tag_name) }
+
       if @api_note.save
-        render :show, status: :created, location: @api_note
+        render :show, status: :created, location: api_note_url(@api_note) # [:api, @api_note]
       else
-        render json: @api_note.errors, status: :bad_request
+        render :error, status: :bad_request
       end
     end
 
@@ -49,7 +64,7 @@ module Api
 
       # Never trust parameters from the scary internet, only allow the white list through.
       def api_note_params
-        params.fetch(:api_note, {})
+        params.permit(:title, :body)
       end
   end
 end

@@ -1,2 +1,2 @@
-json.extract! api_note, :id, :created_at, :updated_at
-json.url api_note_url(api_note, format: :json)
+json.extract! api_note, :title, :body, :created_at, :updated_at
+json.tags api_note.tags, :name
