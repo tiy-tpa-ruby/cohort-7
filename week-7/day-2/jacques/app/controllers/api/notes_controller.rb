@@ -2,6 +2,14 @@ module Api
   class NotesController < ApplicationController
     before_action :set_api_note, only: [:show, :update, :destroy]
 
+    def for_tag
+      @tag_name = params[:tag_name]
+
+      the_tag = Tag.find_by(name: @tag_name)
+
+      @api_notes = the_tag.notes
+    end
+
     # GET /api/notes
     # GET /api/notes.json
     def index
