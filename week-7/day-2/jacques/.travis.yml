@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  - 2.3.0
+services:
+  - postgresql
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate test
+before_script:
+  - psql -c 'create database jacques_test' -U postgres
